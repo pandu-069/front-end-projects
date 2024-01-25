@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --black-color:black;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background:url('https://img.freepik.com/free-vector/bokeh-defocused-background_23-2148497833.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #66fcf1;
+    animation: animateBg 4s linear infinite;
+
+}
+
+@keyframes animateBg{
+    100%{
+        filter:hue-rotate(360deg);
+    }
+}
+
+.reg-box{
+    position: relative;
+    width: 440px;
+    height: 650px;
+    background: transparent;
+    border-radius: 15px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+
+}
+
+h2{
+    font-size: 2em;
+    color:var(--black-color);
+    text-align:center;
+}
+
+.input-box{
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 1px solid var(--black-color);
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left:5px;
+    transform: translateY(-50%);
+    font-size:1em;
+    color:var(--black-color);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label
+{
+    top:-5px;
+}
+
+.input-box input{
+    width: 100%;
+    height:50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--black-color);
+    padding: 0 35px 0 5px;
+
+}
+
+.input-box .icon
+{
+    position:absolute;
+    right:8px;
+    top:50%;
+    color:var(--black-color);
+    transform: translateY(-50%);
+}
+
+.selectt{
+    padding:10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.selectt select{
+    border:none;
+    outline:none;
+    background: transparent;
+    justify-content: space-between;
+    left:5px;
+}
+
+.input-rad{
+    justify-content: center;
+    padding:10px;
+}
+
+.input-rad input{
+    justify-content: space-evenly;
+}
+
+button{
+    width:100%;
+    margin-top: 5px;
+    padding:13px;
+    border: 1px solid grey;
+    border-radius: 50px;
+    background: transparent;
+    box-shadow: 0 0 25px rgb(0,140,255);
+}
+
+button:hover{
+    box-shadow: 0 0 5px rgb(0,140,255),
+    0 0 25px rgb(0,140,255),
+    0 0 50px rgb(0,140,255),
+    0 0 100px rgb(0,140,255);
+}
+
+.login{
+    padding:15px
+}
+
+.login a{
+    text-decoration: none;
+    color:var(--black-color);
+    font-weight: 600;
+
+}
+
+.login a:hover{
+    text-decoration: underline;
+    color:var(--black-color);
+    
+}
+
+@media (max-width:500px) {
+    .reg-box {
+    width:100%;
+    height:100vh;
+    border:none;
+    border-radius:0;
+    }
+    .input-box {
+    width:290px;
+    }
+}
